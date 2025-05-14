@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  avatar-app:
+    build: .
+    container_name: avatar-app
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all  # GPU kullanımını belirtir
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]  # GPU desteğini belirtir
