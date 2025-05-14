@@ -1,7 +1,10 @@
-torch==1.12.1
+torch==2.2.2
 transformers==4.23.1
 flask==2.0.2
 requests==2.26.0
 opencv-python==4.5.3.56
-numpy==1.21.0
+numpy>=1.22
+tortoise-tts
 streamlit
+torchaudio==2.2.2
+
